@@ -8,18 +8,21 @@
 </head>
   <body style="overflow-y:auto; margin:0;">
  <!--背景图代码以及网页显示内容-->
-    <div style="height:100vh;
-  width:calc(100vw);
+  
+  <div id="lty"
+    style="height:100vh;
+  width:100vw;
   background-image: url(https://s41.ax1x.com/2026/10/28/pnsH4UO.jpg);
    background-size: cover;
   overflow-x: hidden;
-  position: relative;">
+  position: relative;
+    transition: height 0.6s">
 <!--夜间模式按钮-->
       <div style="display: flex;
   justify-content: flex-end;
         position: fixed;
         right: 10px;
-        z-index:10;">
+        z-index:90;">
  <button onclick="pps()"
    style="
    width: 27vw;
@@ -30,7 +33,9 @@
         <button style="
 border: none;
   border-radius: 5px;
-  background-color: hwb(162 69% 2%)" id="Lou">
+  z-index:90;
+  background-color: hwb(162 69% 2%)"
+  id="Lou">
 ☰ 菜单
 </button>
 </div>
@@ -41,11 +46,9 @@ border: none;
     background: hwb(0 100% 0%);
       width: 100vw;
       height: 100vh;
-    z-index: 5;
+    z-index: 90;
       position: fixed;
       right: -200vw;">
-
-  
 </div>
 <!--导航页侧边栏--> 
       <aside id="lou" class=lou2
@@ -58,9 +61,11 @@ opacity: 0.8;
   width: 20%;
   height: 60%;
  padding:20px; 
-position: fixed;
+position: fixed; 
 box-sizing:20%;
-margin-top: 20px;">
+margin-top: 20px;
+transition: right 0.4s;
+z-index: 999;">
 
 
 <h2 style="color: lab(0% 0 0);
@@ -68,10 +73,19 @@ margin-top: 20px;">
 margin-top:-20px;">
   导航
 </h2>
-<a  onclick="t1()" style="display: block;" href="#huaep1">我们是谁</a>
-  <a onclick="t2()" style="display: block;" href="#huaep2">发展历史</a>
-<a onclick="t3()" style="display: block;" href="#huaep3">园区环境</a>
-</aside>
+<div style="margin-top: -20px;">
+   <a  onclick="t1()" style="display: block;" href="#huaep1">我们是谁</a>
+  <a onclick="t1()" style="display: block;" href="#huaep2">发展历史</a>
+<a onclick="t1()" style="display: block;" href="#huaep3">园区环境</a>
+</div>
+  <h2 style="color: lab(0% 0 0);
+  margin-right:5%;
+margin-top:-5px;">
+  其它
+</h2>
+<a onclick="t1()" style="display: block;" id="dahua1">大头页</a>
+      
+  </aside>
     
     <!--以下为华为介绍内容-->
     <h1 id="huaep1"  style="color:hwb(180 44% 8%);">
@@ -158,12 +172,26 @@ margin-top:-20px;">
   style="
    width: 200px;
    height:auto;">
-     
+    </div>
+      <!--其它页中的华为人物介绍页-->     
 
+    <div style="background-color:rgb(220, 245, 248);
+  width:100vw;
+  height:0vh;
+position: fixed;
+z-index: 10;
+top: 0;
+left: 0;
+transition: height 0.5s"
+id="headdiv">
+<p id="bigp1"
+  style="height:0px;
+  overflow: hidden">
+  更新中……
+</p>
 
-
-
-
+      
+</div>
 <!--js语言-->
 <script>
 //侧边栏弹出函数
@@ -188,28 +216,39 @@ let run_fun = document.getElementById("run");
 //侧边栏点击后收回函数
   function t1() {
 let asd =document.getElementById("lou");
+let bigp1a = document.getElementById("bigp1")
     if (asd.style.right === "0px") {
-  asd.style.right = "-500px"  
+  asd.style.right = "-500px"
+      bigdiv.style.height = 100 + "vh"
+      headbiv.style.height = 0 + "vh"
+ asd.style.right = "-500px"
+      bigp1a.style.height = "0px"
    } else {
   alert("网页出现错误，请重启")
+  
    } 
   }
-  function t2() {
+ // 大头页出现消失动画
+let bigdiv = document.getElementById("lty")
+let dighead = document.getElementById("dahua1")
+let headbiv = document.getElementById("headdiv")
 let asd =document.getElementById("lou");
-    if (asd.style.right === "0px") {
-  asd.style.right = "-500px"  
-   } else {
-  alert("网页出现错误，请重启")
-   } 
+let bigp1a = document.getElementById("bigp1")
+dahua1.onclick = function bigv(params) {
+    if (bigdiv.style.height === "100vh") {
+ bigdiv.style.height = 0 + "vh"  
+  headbiv.style.height = 100 + "vh"
+      asd.style.right = "-500px"
+      bigp1a.style.height = "auto"
+    } else {
+    bigdiv.style.height = 100 + "vh"
+      headbiv.style.height = 0 + "vh"
+ asd.style.right = "-500px"
+      bigp1a.style.height = "0px"
+    }  
   }
-  function t3() {
-let asd =document.getElementById("lou");
-    if (asd.style.right === "0px") {
-  asd.style.right = "-500px"  
-   } else {
-  alert("网页出现错误，请重启")
-   } 
-  }
+
+
 
   
 </script>
