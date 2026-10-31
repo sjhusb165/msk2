@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>尝试</title>
+    <title>小洛的网页</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+html {scroll-behavior: smooth;}
+  </style>
 </head>
   <body style="overflow-y:auto; margin:0;">
  <!--背景图代码以及网页显示内容-->
   
   <div id="lty"
-    style="height:100vh;
+    style="min-height:100vh;
+ background-attachment: fixed;   
   width:100vw;
   background-image: url(tianyi.jpg);
    background-size: cover;
@@ -22,7 +26,7 @@
   justify-content: flex-end;
         position: fixed;
         right: 10px;
-        z-index:90;">
+        z-index:999;">
  <button onclick="pps()"
    style="
    width: 27vw;
@@ -33,7 +37,7 @@
         <button style="
 border: none;
   border-radius: 5px;
-  z-index:90;
+  z-index:999;
   background-color: hwb(162 69% 2%)"
   id="Lou">
 ☰ 菜单
@@ -74,16 +78,28 @@ margin-top:-20px;">
   导航
 </h2>
 <div style="margin-top: -20px;">
-   <a  onclick="t1()" style="display: block;" href="#huaep1">我们是谁</a>
-  <a onclick="t1()" style="display: block;" href="#huaep2">发展历史</a>
-<a onclick="t1()" style="display: block;" href="#huaep3">园区环境</a>
+   <a  onclick="t1()"
+     style="display: block;
+     text-decoration: none;
+     color: hwb(164 0% 33%)" href="#huaep1">我们是谁</a>
+  
+  <a onclick="t1()"
+    style="display: block;
+    text-decoration: none;
+    color: hwb(164 0% 33%)" href="#huaep2">发展历史</a>
+
+  <a onclick="t1()"
+    style="display: block;
+    text-decoration: none;
+    color:hwb(164 0% 33%)" href="#huaep3">园区环境</a>
 </div>
   <h2 style="color: lab(0% 0 0);
   margin-right:5%;
 margin-top:-5px;">
   其它
 </h2>
-<a onclick="t1()" style="display: block;" id="dahua1">大头页</a>
+<a onclick="t1()" style="display: block;
+  margin-top:-25px;" id="dahua1">大头页</a>
       
   </aside>
     
@@ -134,7 +150,7 @@ margin-top:-5px;">
    
     <div style="display: flex;
   gap: 10px;">
- <img src="https://s41.ax1x.com/2026/10/28/pnsH55D.jpg"
+ <img src="Huawei1.jpeg"
    style="
    width: 200px;
    height:auto;"> 
@@ -168,12 +184,25 @@ margin-top:-5px;">
   margin-left: 2%;">
   生产基地最大绿化率已达40%遥遥领先于同类园区，生活区山清水透，静水相依。
 </p>
-<img src="https://s41.ax1x.com/2026/10/28/pnsHT8H.jpg"
+<img src="hua2.jpg"
   style="
    width: 200px;
    height:auto;">
     </div>
-      <!--其它页中的华为人物介绍页-->     
+    <!--鸣谢语言-->
+   <div style="padding-left: 38%;
+     width: auto;
+     height: 70px;">
+     <br>
+    <a href="https://love.luo712.us.ci/">网站更新日志</a>
+     <br>
+       <a href="mailto:h91jm@outlook.com" style="
+         margin-left: 7%;">问题反馈</a>
+    
+
+
+   </div>
+    <!--其它页中的华为人物介绍页-->     
 
     <div style="background-color:rgb(220, 245, 248);
   width:100vw;
@@ -219,8 +248,6 @@ let asd =document.getElementById("lou");
 let bigp1a = document.getElementById("bigp1")
     if (asd.style.right === "0px") {
   asd.style.right = "-500px"
-      bigdiv.style.height = 100 + "vh"
-      headbiv.style.height = 0 + "vh"
  asd.style.right = "-500px"
       bigp1a.style.height = "0px"
    } else {
@@ -247,6 +274,7 @@ dahua1.onclick = function bigv(params) {
       bigp1a.style.height = "0px"
     }  
   }
+
 
 
 
