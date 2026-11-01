@@ -248,12 +248,8 @@ let asd =document.getElementById("lou");
 let bigp1a = document.getElementById("bigp1")
     if (asd.style.right === "0px") {
   asd.style.right = "-500px"
- asd.style.right = "-500px"
       bigp1a.style.height = "0px"
-   } else {
-  alert("网页出现错误，请重启")
-  
-   } 
+  }
   }
  // 大头页出现消失动画
 let bigdiv = document.getElementById("lty")
@@ -262,13 +258,14 @@ let headbiv = document.getElementById("headdiv")
 let asd =document.getElementById("lou");
 let bigp1a = document.getElementById("bigp1")
 dahua1.onclick = function bigv(params) {
-    if (bigdiv.style.height === "100vh") {
+    if (headbiv.style.height === "0vh" 
+    || headbiv.style.height === "" ){
  bigdiv.style.height = 0 + "vh"  
   headbiv.style.height = 100 + "vh"
       asd.style.right = "-500px"
       bigp1a.style.height = "auto"
     } else {
-    bigdiv.style.height = 100 + "vh"
+    bigdiv.style.height =""
       headbiv.style.height = 0 + "vh"
  asd.style.right = "-500px"
       bigp1a.style.height = "0px"
