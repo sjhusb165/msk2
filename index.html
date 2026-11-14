@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>小洛的网页</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="msvalidate.01" content="8FCE70021C2E5D5C198DADF92B72608A" />
 <style>
 html {scroll-behavior: smooth;}
 
@@ -41,7 +42,7 @@ min-height:100vh;
  <!--背景图代码以及网页显示内容-->
   
   <div id="lty">
-<!--夜间模式按钮-->
+<!--网页跳转-->
       <div style="display: flex;
   justify-content: flex-end;
         position: fixed;
@@ -49,9 +50,9 @@ min-height:100vh;
         z-index:999;">
  <button onclick="pps()"
    style="
-   width: 27vw;
+   width: 35vw;
    height: auto;">
-   夜间模式切换
+   作者的更多网页
  </button>  
  <!--菜单按钮代码-->
         <button style="
@@ -63,17 +64,30 @@ border: none;
 ☰ 菜单
 </button>
 </div>
-<!--夜间模式代码-->
+<!--更多网页-->
     <div 
      id="run" 
       style="
-    background: hwb(0 100% 0%);
+    background: linear-gradient(to bottom,
+#ffd1dc, #e6d6ff, #ceb1ff);
       width: 100vw;
       height: 100vh;
     z-index: 90;
       position: fixed;
-      right: -200vw;">
-</div>
+      right: -200vw;
+      transition: right 0.3s">
+<h1 style="margin-bottom: 0px ;color: #66ccff">试验性网页</h1>
+<h4 style="margin: 0px;">(点击即可下载)</h4>
+<div style="display: flex;">
+<a style="margin: 10px;text-decoration: none;
+  color: hwb(336 42% 0%)"
+   id="ysgame">原神跳转页</a>
+    
+    
+    
+    
+</div>   
+  </div>
 <!--导航页侧边栏--> 
       <aside id="lou" class=lou2
   style="position: fixed;
@@ -121,7 +135,9 @@ margin-top:-5px;">
 <a onclick="t1()" style="display: block;
   margin-top:-25px;" id="dahua1">大头页</a>
       
-  </aside>
+  
+      
+    </aside>
     
     <!--以下为华为介绍内容-->
     <h1 id="huaep1"  style="color:hwb(180 44% 8%);">
@@ -241,9 +257,27 @@ id="headdiv">
   overflow: hidden">
   更新中……
 </p>
+    </div>
 
-      
-</div>
+    
+  <div style="
+width: 100vw;
+height: 0;
+background: linear-gradient(to bottom,
+#ffd1dc, #e6d6ff, #ceb1ff);
+position: fixed;z-index: 100;
+top: 0px; left: 0px;overflow: hidden"
+id="tioba">
+<p id="frqi" style="margin: 0px;">发射器</p>
+<p style="margin: 0px;" id="frqi2">27</p>
+    
+    
+    
+    
+    
+    
+    
+  </div>
 <!--js语言-->
 <script>
 //侧边栏弹出函数
@@ -294,6 +328,22 @@ dahua1.onclick = function bigv(params) {
       bigp1a.style.height = "0px"
     }  
   }
+
+//跳转
+let ysgame = document.getElementById("ysgame")
+let tioba = document.getElementById("tioba")
+let frqi = document.getElementById("frqi")
+let frqi2 = document.getElementById("frqi2");
+
+  
+  
+ysgame.onclick = function () {
+tioba.style.height = "100vh";
+frqi.innerHTML = "<h1>正在跳转</h1>"
+
+};
+
+
 
 
 
